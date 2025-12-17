@@ -1,69 +1,84 @@
-# 🎨 PhotoshopATK — Mini Macropad for Photoshop Power Users
+## PhotoshopATK
 
-PhotoshopATK is a pocket-sized, single-handed macropad I put together to make editing in Adobe Photoshop a whole lot smoother. Instead of reaching for a bunch of keyboard shortcuts, you get quick, tactile access to your favorite commands—just tap and go. It’s lightweight, ergonomic(ish), and really speeds things up when you’re in the editing zone.
+PhotoshopATK is a compact, single-handed macropad designed to make editing in Adobe Photoshop faster and more efficient. It gives you quick access to your most-used editing commands so you can focus on creating instead of hunting for keyboard shortcuts. The macropad is lightweight, easy to use, and built for speed during creative work.
 
----
+--- 
+## Purpose
 
-## 🛠️ Why I Made This
-
-If you’ve ever found yourself constantly jumping between the brush tool, undoing, redoing, and zooming—this pad is for you. PhotoshopATK simplifies that whole mess by moving your most-used shortcuts onto physical buttons. Less hunting for hotkeys, more time doing actual work.
-
-It’s a tiny helper, but honestly, it makes a big difference.
+PhotoshopATK streamlines Photoshop workflows by putting essential actions—such as undo, redo, and tool shortcuts—on dedicated physical buttons. This reduces repetitive keyboard movements, speeds up editing, and makes the overall process smoother and more comfortable.
 
 ---
+## Case Design
 
-## 🧱 The Case (Yep, It's 3D-Printed)
+The case is fully 3D-printed and built to fit within the Hackpad size requirements.
+It includes:
 
-The enclosure is completely 3D printed to fit neatly in the palm of your hand (or next to your tablet). It's designed around the Hackpad format and keeps things compact but accessible.
+Top shell
 
-It features:
+Bottom shell
 
-- A snug top & bottom shell
-- Mounting slots for the XIAO RP2040 (our brains)
-- Clearance for the custom PCB + switches
+Mounting space for the XIAO RP2040
 
-> ![3D Model of PhotoshopATK](https://github.com/user-attachments/assets/55c004b0-a556-4b12-8840-247d515a62b1)
+Clearance for the PCB and switches
 
----
+<img width="412" height="392" alt="Screenshot 2025-12-04 115244" src="https://github.com/user-attachments/assets/55c004b0-a556-4b12-8840-247d515a62b1" />
 
-## 🔌 The PCB
-
-Designed in KiCad to support four mechanical switches, all directly connected to the XIAO RP2040. Super simple. It follows the 100×100 mm limit (in case you’re panelizing or doing small-batch fab).
 
 ---
+## PCB Overview
 
-## 🧠 Firmware Stuff
-
-The firmware is written in CircuitPython using the [KMK firmware framework](https://github.com/KMKfw/kmk_firmware). It handles all the key mappings and gets the macropad talking to Photoshop.
-
-### Mapped Shortcuts
-
-- `Ctrl + Z` → Undo
-- `Ctrl + Shift + Z` → Redo
-- The rest? Totally up to you.
-
-📁 Firmware lives in: `/Firmware/main.py`
-
-### Setup Instructions
-
-1. Flash KMK to your XIAO RP2040
-2. Drop `main.py` into the KMK folder on the device
-3. Plug it in, fire up Photoshop, and go make cool stuff
+The PCB is designed to support four mechanical switches connected directly to the XIAO RP2040. It remains compact and meets the 100×100 mm rule.
 
 ---
+## Firmware
 
-## 📦 Bill of Materials (BOM)
+The firmware is written in KMK (CircuitPython) and maps the macropad buttons to Photoshop editing shortcuts.
 
-| Item                        | Qty | Notes                       |
-|----------------------------|-----|-----------------------------|
-| Seeed Studio XIAO RP2040   | 1   | The microcontroller         |
-| Mechanical Switches (MX)   | 4   | Go with your favorites      |
-| Custom PCB                 | 1   | Designed in KiCad           |
-| 3D Printed Case (Top + Bottom) | 1 set | Optional color flair 😉     |
-| Keycaps                    | 4   | Any MX-compatible set       |
-| Wires/Solder               | —   | Standard assembly stuff     |
+Example actions:
+
+Undo – Ctrl + Z
+
+Redo (Photoshop) – Ctrl + Shift + Z
+
+Other tools or shortcuts as needed
+
+Firmware file:
+/Firmware/main.py
 
 ---
+## Bill of Materials (BOM)
+Item	Quantity	Notes
+Seeed Studio XIAO RP2040	1	Main MCU
+Mechanical Switches	4	Any MX-style switch
+Custom PCB	1	Designed in KiCad
+3D Printed Case	1 set	Top + Bottom
+Keycaps	4	Any compatible keycaps
+Wires/Solder	—	For assembly
+📁 Repository Structure
+/CAD
+    PhotoshopATK.step
 
-## 🗂️ Repo Structure
+/PCB
+    PhotoshopATK.kicad_pcb
+    PhotoshopATK.kicad_sch
+    PhotoshopATK.kicad_pro
 
+/Firmware
+    main.py
+
+README.md
+
+---
+## How to Use
+
+Flash the KMK firmware to your XIAO RP2040
+
+Place main.py inside the KMK folder
+
+Connect the macropad to your computer
+
+Open Photoshop and enjoy the faster workflow
+
+## License
+
+Open-source project — feel free to build on it!
