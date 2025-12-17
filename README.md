@@ -1,4 +1,4 @@
-### Summary
+## Summary
 
 PhotoshopATK is a compact, single-handed macropad designed to make editing in Adobe Photoshop faster and more efficient. It gives you quick access to your most-used editing commands so you can focus on creating instead of hunting for keyboard shortcuts. The macropad is lightweight, easy to use, and built for speed during creative work.
 
